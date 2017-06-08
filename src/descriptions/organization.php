@@ -44,6 +44,49 @@
                 ],
             ]
         ],
+        'AddCard' => [
+            'httpMethod' => 'POST',
+            'uri' => '/{ApiVersion}/cards',
+            'responseModel' => 'Result',
+            'parameters' => [
+                'ApiVersion' => [
+                    'required' => true,
+                    'type'     => 'string',
+                    'location' => 'uri',
+                ],
+                'key' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'query',
+                ],
+                'token' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'query',
+                ],
+                'name' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'query',
+                ],
+                'desc' => [
+                    'required' => false,
+                    'type' => 'string',
+                    'location' => 'query',
+                ],
+                'idList' => [
+                    'required' => true,
+                    'type' => 'string',
+                    'location' => 'query',
+                ],
+                'pos' => [
+                    'required' => false,
+                    'type' => 'string',
+                    'location' => 'query',
+                ],
+
+            ]
+        ],
         'RemoveMember' => [
             'httpMethod' => 'DELETE',
             'uri' => '/{ApiVersion}/organizations/{idOrg}/members/{idMember}',
